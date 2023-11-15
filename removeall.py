@@ -1,5 +1,5 @@
 import sqlite3
-con = sqlite3.connect("../../Downloads/bdLUZ.dmn.sqlite")
+con = sqlite3.connect("../../Downloads/file.sqlite")
 cur = con.cursor()
 cur2 = con.cursor()
 cur3 = con.cursor()
