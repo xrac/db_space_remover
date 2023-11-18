@@ -26,5 +26,5 @@ for name in res:
       cur3.execute(f'ALTER TABLE \'{table}\' RENAME COLUMN \'{column}\' TO \'{newcolname}\';');
     if('ó' in column):
       newcolname = column.replace('ó','o')
-      print(f'Rename {column} >>>>> {newcolname} ')
+      print(f'Rename {column} >>ó>>> {newcolname} ')
       cur3.execute(f'ALTER TABLE \'{table}\' RENAME COLUMN \'{column}\' TO \'{newcolname}\';');
