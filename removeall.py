@@ -1,5 +1,5 @@
 import sqlite3
-con = sqlite3.connect("../../Downloads/file.sqlite")
+con = sqlite3.connect("../../Descargas/bdLUZ.dmn.sqlite")
 cur = con.cursor()
 cur2 = con.cursor()
 cur3 = con.cursor()
@@ -20,5 +20,11 @@ for name in res:
       newcolname = column.replace(' ','')
       print(f'Rename {column} >>>>> {newcolname} ')
       cur3.execute(f'ALTER TABLE \'{table}\' RENAME COLUMN \'{column}\' TO \'{newcolname}\';');
-
-    
+    if('ñ' in column):
+      newcolname = column.replace('ñ','n')
+      print(f'Rename {column} >>ñ>>> {newcolname} ')
+      cur3.execute(f'ALTER TABLE \'{table}\' RENAME COLUMN \'{column}\' TO \'{newcolname}\';');
+    if('ó' in column):
+      newcolname = column.replace('ó','o')
+      print(f'Rename {column} >>>>> {newcolname} ')
+      cur3.execute(f'ALTER TABLE \'{table}\' RENAME COLUMN \'{column}\' TO \'{newcolname}\';');
